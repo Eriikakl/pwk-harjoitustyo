@@ -5,11 +5,11 @@ const Footer = () => {
     <footer
       style={{
         textAlign: 'center',
-        padding: '10px',
+        padding: 10,
         backgroundColor: '#f1f1f1',
-        position: 'fixed',
+        position: 'inherit',
         bottom: '0',
-        width: '100%',
+        width: '1200px',
         fontSize: 12
       }}
     >
