@@ -23,7 +23,7 @@ function LoginForm() {
       await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("Tämä on esimerkkiviesti " + user.email);
+        console.log("Kirjautunut käyttäjä: " + user.email);
         navigate('/');
       });
     } catch (error) {

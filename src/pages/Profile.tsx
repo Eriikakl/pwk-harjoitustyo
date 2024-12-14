@@ -78,7 +78,6 @@ function Profile() {
 
             querySnapshot.forEach(async (doc) => {
                 await deleteDoc(doc.ref);
-                console.log(`Elokuva ${movieName} poistettu onnistuneesti`);
             });
 
             setUserMovies(prevMovies => prevMovies.filter(movie => movie !== movieName));

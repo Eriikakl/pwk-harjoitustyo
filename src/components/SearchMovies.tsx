@@ -27,17 +27,14 @@ const SearchMovie = () => {
       setCharacters([]);
       return;
     }
-    console.log(query);
     try {
       const response = await fetch(
         `https://api.disneyapi.dev/character?name=${query}`
       );
-      console.log(response);
       if (!response.ok) {
         throw new Error('Virhe haettaessa elokuvia');
       }
       const data = await response.json();
-      console.log(data.data);
 
       if (Array.isArray(data.data)) {
         setCharacters(data.data);
@@ -94,7 +91,7 @@ const SearchMovie = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h2>Hae hahmon perusteella</h2>
+      <h2>Hae elokuvia hahmon perusteella</h2>
       <input
         type="text"
         placeholder="Kirjoita hakusana..."

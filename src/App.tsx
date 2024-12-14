@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Profile from './pages/Profile';
+import Footer from './components/Footer';
 
 import './App.css'
 
@@ -61,6 +62,7 @@ function App() {
           </div>
         </div>
       </Router>
+      <Footer />
     </>
   )
 }
