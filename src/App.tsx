@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/pwk-harjoitustyo">
         <div className="app">
           <nav className="tab-nav">
             <NavLink to="/" className={({ isActive }) => isActive ? 'tab active' : 'tab'}>Etusivu</NavLink>
