@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab-nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #bc9191;
+  padding: 10px 20px;
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Tabien tyyli */
+.tab {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.card {
-  padding: 2em;
+
+/* Hover-efekti */
+.tab:hover {
+  background-color: #b8a5a5;
+  color: white
 }
 
-.read-the-docs {
-  color: #888;
+/* Aktiivinen tab */
+.active {
+  border-bottom: 3px solid #be7c7c;
+}
+
+/* Sisältöalue */
+.content {
+  padding: 80px 20px 20px;
+  background-color: #f4f4f4;
+  min-height: 500px;
+  min-width: 800px;
+  justify-content: center;
+}
+
+.logout {
+  font-weight: bold;  /* Lisää lihavointi Kirjaudu ulos -linkille */
+  color: #d9534f;     /* Punainen väri */
+  border: 2px solid #d9534f;  /* Punainen reuna */
+  border-radius: 5px; /* Pyöristetyt kulmat */
+}
+
+.logout:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+.logout.active {
+  background-color: #c9302c;  /* Tumma punainen aktiiviselle */
+  color: white;
 }
