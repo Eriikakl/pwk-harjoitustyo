@@ -71,13 +71,15 @@ const CharacterList = () => {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '20px',
+          justifyContent: 'center'
         }}
       >
         {randomCharacters.map((character, index) => (
           <div
             key={character._id || index}
             style={{
-              width: '200px',
+              flex: '1 1 200px',
+              maxWidth: '200px',
               textAlign: 'center',
               borderRadius: '10px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',

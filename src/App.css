@@ -1,19 +1,31 @@
+/* Yleiset tyylit */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  background-color: #f4f4f4; /* Taustaväri koko sivulle */
 }
 
+/* App-containerin tyylit */
 .app {
   text-align: center;
+  width: 100%;
+  max-width: 1200px; /* Rajoittaa maksimi leveyttä suurilla näytöillä */
+  margin: 0 auto; /* Keskittää sovelluksen vaakasuunnassa */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Tab-nav - tyylit */
 .tab-nav {
   display: flex;
   justify-content: space-evenly;
   background-color: #bc9191;
   padding: 10px 20px;
-  width: 100%; 
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,11 +40,10 @@ body {
   font-size: 18px;
 }
 
-
 /* Hover-efekti */
 .tab:hover {
   background-color: #b8a5a5;
-  color: white
+  color: white;
 }
 
 /* Aktiivinen tab */
@@ -45,15 +56,18 @@ body {
   padding: 80px 20px 20px;
   background-color: #f4f4f4;
   min-height: 500px;
-  min-width: 800px;
+  width: 100%;
   justify-content: center;
+  box-sizing: border-box;
 }
 
+/* Kirjaudu ulos -linkin tyylit */
 .logout {
-  font-weight: bold;  /* Lisää lihavointi Kirjaudu ulos -linkille */
-  color: #d9534f;     /* Punainen väri */
-  border: 2px solid #d9534f;  /* Punainen reuna */
-  border-radius: 5px; /* Pyöristetyt kulmat */
+  font-weight: bold;
+  color: #d9534f;
+  border: 2px solid #d9534f;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .logout:hover {
@@ -62,6 +76,50 @@ body {
 }
 
 .logout.active {
-  background-color: #c9302c;  /* Tumma punainen aktiiviselle */
+  background-color: #c9302c;
   color: white;
+}
+
+/* Responsiivisuus: Keskikokoiset näytöt (tabletit) */
+@media (max-width: 768px) {
+  .tab-nav {
+    flex-direction: column; /* Tabit asetetaan pinoon */
+    align-items: center;
+  }
+
+  .tab {
+    font-size: 16px; /* Pienennetään fonttikokoa pienillä näytöillä */
+    padding: 10px;
+  }
+
+  .content {
+    padding: 120px 20px 20px; /* Lisätään enemmän tilaa sisällölle, jotta tabit eivät peitä */
+  }
+}
+
+/* Responsiivisuus: Pienet näytöt (puhelimet) */
+@media (max-width: 480px) {
+  body {
+    padding: 0; /* Poistaa marginaalit */
+  }
+
+  .tab-nav {
+    padding: 10px 5px; /* Pienempi padding */
+  }
+
+  .tab {
+    font-size: 14px; /* Vielä pienempi fonttikoko */
+    padding: 8px 16px; /* Pienempi padding */
+  }
+
+  .content {
+    padding: 120px 10px 10px; /* Vähennetään marginaaleja */
+    min-height: auto;
+    width: 100%; /* Varmistetaan, että sisältö vie koko leveys */
+  }
+
+  .app {
+    padding: 10px;
+    max-width: 100%; /* Sovellus vie koko ruudun leveydeltään */
+  }
 }
