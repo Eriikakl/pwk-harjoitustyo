@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConfig'
@@ -15,18 +15,13 @@ interface Character {
 const SearchMovie = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState<string[]>([]);
-  const [image, setImage] = useState<string>('');
   const [characters, setCharacters] = useState<Character[]>([]);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [noResultsMessage, setNoResultsMessage] = useState<string | null>(null);
-  const [searchPerformed, setSearchPerformed] = useState(false);
-
 
   // Hakutoiminto
   const handleSearch = async () => {
-    setSearchPerformed(true);
     if (!query.trim()) {
-      setSearchPerformed(false);
       setMovies([]);
       setNoResultsMessage(null);
       setCharacters([]);

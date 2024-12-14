@@ -1,7 +1,6 @@
-import React from 'react';
 
 import { useEffect, useState } from 'react';
-import { getFirestore, collection, getDocs, query, where, deleteDoc, doc } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where, deleteDoc } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from "../../firebaseConfig";
 import { getAuth } from 'firebase/auth';
