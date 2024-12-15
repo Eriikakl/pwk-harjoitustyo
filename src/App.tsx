@@ -62,7 +62,8 @@ function App() {
           </div>
         </div>
       </Router>
-      <Footer />
+      <div className="contentfooter"><Footer /> </div>
+      
     </>
   )
 }

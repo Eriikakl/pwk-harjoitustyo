@@ -104,7 +104,7 @@ const SearchMovie = () => {
             setCharacters([]);
           }
         }}
-        style={{ padding: '10px', width: '300px', marginRight: '10px' }}
+        style={{ padding: '10px', width: 'auto', marginRight: '10px' }}
       />
       <button onClick={handleSearch} style={{ padding: '10px' }}>
         Hae

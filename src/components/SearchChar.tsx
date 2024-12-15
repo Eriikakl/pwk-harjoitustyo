@@ -52,7 +52,7 @@ const CharacterList = () => {
   useEffect(() => {
     const getCharacters = async () => {
       const charactersData = await fetchAllCharacters();
-      setRandomCharacters(getRandomCharacters(charactersData, 10)); // Näytetään 10 satunnaista hahmoa
+      setRandomCharacters(getRandomCharacters(charactersData, 12)); // Näytetään 12 satunnaista hahmoa
       setLoading(false);
     };
 
@@ -71,7 +71,8 @@ const CharacterList = () => {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '20px',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          maxWidth: '100%'
         }}
       >
         {randomCharacters.map((character, index) => (
