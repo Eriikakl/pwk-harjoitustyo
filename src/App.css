@@ -94,6 +94,8 @@ body {
 
   .content {
     padding: 120px 20px 20px;
+    font-size: small;
+    justify-content: center;
   }
   .contentfooter {
     padding: 10px 0px 10px;
@@ -121,6 +123,8 @@ body {
     padding: 10px 10px 10px; 
     min-height: auto;
     width: 50%; 
+    font-size: small;
+    justify-content: center;
   }
   .contentfooter {
     padding: 10px 0px 10px;
