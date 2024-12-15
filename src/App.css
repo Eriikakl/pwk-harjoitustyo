@@ -1,4 +1,3 @@
-/* Yleiset tyylit */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,20 +5,18 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #f4f4f4; /* Taustaväri koko sivulle */
+  background-color: #f4f4f4;
 }
 
-/* App-containerin tyylit */
 .app {
   text-align: center;
   width: 100%;
-  max-width: 1200px; /* Rajoittaa maksimi leveyttä suurilla näytöillä */
-  margin: 0 auto; /* Keskittää sovelluksen vaakasuunnassa */
+  max-width: 1200px;
+  margin: 0 auto; 
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Tab-nav - tyylit */
 .tab-nav {
   display: flex;
   justify-content: space-evenly;
@@ -32,7 +29,6 @@ body {
   z-index: 1000;
 }
 
-/* Tabien tyyli */
 .tab {
   color: white;
   padding: 10px 20px;
@@ -40,18 +36,15 @@ body {
   font-size: 18px;
 }
 
-/* Hover-efekti */
 .tab:hover {
   background-color: #b8a5a5;
   color: white;
 }
 
-/* Aktiivinen tab */
 .active {
   border-bottom: 3px solid #be7c7c;
 }
 
-/* Sisältöalue */
 .content {
   padding: 80px 20px 20px;
   background-color: #f4f4f4;
@@ -61,7 +54,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Kirjaudu ulos -linkin tyylit */
 .logout {
   font-weight: bold;
   color: #d9534f;
@@ -80,46 +72,46 @@ body {
   color: white;
 }
 
-/* Responsiivisuus: Keskikokoiset näytöt (tabletit) */
+
 @media (max-width: 768px) {
   .tab-nav {
-    flex-direction: column; /* Tabit asetetaan pinoon */
+    flex-direction: column; 
     align-items: center;
   }
 
   .tab {
-    font-size: 16px; /* Pienennetään fonttikokoa pienillä näytöillä */
+    font-size: 16px; 
     padding: 10px;
   }
 
   .content {
-    padding: 120px 20px 20px; /* Lisätään enemmän tilaa sisällölle, jotta tabit eivät peitä */
+    padding: 120px 20px 20px;
   }
 }
 
-/* Responsiivisuus: Pienet näytöt (puhelimet) */
+
 @media (max-width: 480px) {
   body {
-    padding: 0; /* Poistaa marginaalit */
+    padding: 0; 
   }
 
   .tab-nav {
-    padding: 10px 5px; /* Pienempi padding */
+    padding: 10px 5px; 
   }
 
   .tab {
-    font-size: 14px; /* Vielä pienempi fonttikoko */
-    padding: 8px 16px; /* Pienempi padding */
+    font-size: 14px; 
+    padding: 8px 16px; 
   }
 
   .content {
-    padding: 120px 10px 10px; /* Vähennetään marginaaleja */
+    padding: 120px 10px 10px; 
     min-height: auto;
-    width: 100%; /* Varmistetaan, että sisältö vie koko leveys */
+    width: 100%; 
   }
 
   .app {
     padding: 10px;
-    max-width: 100%; /* Sovellus vie koko ruudun leveydeltään */
+    max-width: 100%;
   }
 }
